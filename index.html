@@ -6,61 +6,119 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Scholar Flow - AI Study App</title>
+<title>Scholar Flow | AI Powered Learning App</title>
 
-<meta name="description" content="Scholar Flow is an AI-powered study app with notes, subjects, offline learning and AI Ask Premium.">
+<meta name="description" content="Scholar Flow is an AI-powered study app with notes, offline learning, subjects and AI Ask Premium tutor.">
 
-<meta name="keywords" content="Scholar Flow, study app, AI tutor, revision notes, offline learning">
-
-<meta name="author" content="Scholar Flow">
+<meta name="keywords" content="Scholar Flow, AI study app, learning app, student notes, offline education">
 
 
 <style>
 
 *{
-box-sizing:border-box;
 margin:0;
 padding:0;
-font-family:'Segoe UI',Arial,sans-serif;
+box-sizing:border-box;
+font-family:Inter,Segoe UI,Arial,sans-serif;
+}
+
+
+html{
+scroll-behavior:smooth;
 }
 
 
 body{
-background:#f5f8ff;
-color:#222;
-line-height:1.6;
+
+background:#f8fafc;
+color:#0f172a;
+
 }
 
 
 header{
 
-background:linear-gradient(135deg,#1565c0,#42a5f5);
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#2563eb,#7c3aed);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+padding:40px 20px;
+
 color:white;
-padding:80px 20px;
+
+}
+
+
+
+.hero{
+
+max-width:900px;
 text-align:center;
 
 }
 
 
+
 .logo{
 
-font-size:80px;
-margin-bottom:20px;
+width:110px;
+height:110px;
 
-}
+background:white;
 
+color:#2563eb;
 
-header h1{
+border-radius:30px;
+
+display:flex;
+align-items:center;
+justify-content:center;
 
 font-size:55px;
 
+margin:auto auto 25px;
+
 }
 
 
-header p{
+
+.hero h1{
+
+font-size:70px;
+font-weight:800;
+
+}
+
+
+
+.hero span{
+
+color:#fde047;
+
+}
+
+
+
+.hero p{
 
 font-size:22px;
-margin:10px;
+
+margin:25px auto;
+
+max-width:700px;
+
+}
+
+
+
+.buttons{
+
+margin-top:35px;
 
 }
 
@@ -69,30 +127,54 @@ margin:10px;
 .btn{
 
 display:inline-block;
-margin:20px 10px;
-padding:15px 35px;
-border-radius:40px;
+
+padding:16px 35px;
+
+border-radius:50px;
+
 text-decoration:none;
-font-weight:bold;
-font-size:18px;
+
+font-weight:700;
+
+margin:10px;
+
+transition:.3s;
 
 }
 
 
 
-.download{
+.primary{
 
 background:white;
-color:#1565c0;
+color:#2563eb;
 
 }
 
 
 
-.whatsapp{
+.secondary{
 
-background:#25D366;
+background:#22c55e;
 color:white;
+
+}
+
+
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+
+
+section{
+
+padding:90px 20px;
 
 }
 
@@ -101,8 +183,8 @@ color:white;
 .container{
 
 max-width:1200px;
+
 margin:auto;
-padding:50px 20px;
 
 }
 
@@ -111,18 +193,22 @@ padding:50px 20px;
 .title{
 
 text-align:center;
-font-size:35px;
-margin-bottom:40px;
+
+font-size:45px;
+
+margin-bottom:50px;
 
 }
 
 
 
-.features{
+.grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:25px;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
 
 }
 
@@ -131,10 +217,31 @@ gap:25px;
 .card{
 
 background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-text-align:center;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.icon{
+
+font-size:45px;
 
 }
 
@@ -142,8 +249,9 @@ text-align:center;
 
 .card h3{
 
-color:#1565c0;
-margin-bottom:15px;
+margin:20px 0;
+
+color:#2563eb;
 
 }
 
@@ -151,11 +259,15 @@ margin-bottom:15px;
 
 .ai{
 
-margin-top:50px;
-background:#1565c0;
+background:
+linear-gradient(135deg,#111827,#2563eb);
+
 color:white;
-padding:50px;
-border-radius:25px;
+
+border-radius:35px;
+
+padding:60px;
+
 text-align:center;
 
 }
@@ -164,17 +276,18 @@ text-align:center;
 
 .ai h2{
 
-font-size:35px;
+font-size:45px;
 
 }
 
 
 
-.pricing{
+.price{
 
-margin-top:50px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
 gap:30px;
 
 }
@@ -184,10 +297,14 @@ gap:30px;
 .plan{
 
 background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+padding:40px;
+
+border-radius:30px;
+
 text-align:center;
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
 
 }
 
@@ -195,7 +312,19 @@ text-align:center;
 
 .plan h3{
 
-color:#1565c0;
+font-size:30px;
+
+color:#2563eb;
+
+}
+
+
+
+.plan li{
+
+list-style:none;
+
+padding:8px;
 
 }
 
@@ -204,8 +333,10 @@ color:#1565c0;
 .steps{
 
 display:grid;
+
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+
+gap:25px;
 
 }
 
@@ -213,9 +344,12 @@ gap:20px;
 
 .step{
 
-background:white;
+background:#fff;
+
 padding:30px;
+
 border-radius:20px;
+
 text-align:center;
 
 }
@@ -224,7 +358,8 @@ text-align:center;
 
 .faq{
 
-max-width:800px;
+max-width:850px;
+
 margin:auto;
 
 }
@@ -234,10 +369,15 @@ margin:auto;
 .question{
 
 background:white;
-padding:20px;
-margin:10px;
-border-radius:10px;
+
+padding:25px;
+
+margin:15px 0;
+
+border-radius:20px;
+
 cursor:pointer;
+
 font-weight:bold;
 
 }
@@ -247,9 +387,12 @@ font-weight:bold;
 .answer{
 
 display:none;
+
 padding:20px;
-background:#eef4ff;
-margin:0 10px;
+
+background:#eef2ff;
+
+border-radius:15px;
 
 }
 
@@ -258,7 +401,6 @@ margin:0 10px;
 .contact{
 
 text-align:center;
-margin-top:60px;
 
 }
 
@@ -266,42 +408,60 @@ margin-top:60px;
 
 footer{
 
-background:#111;
+background:#020617;
+
 color:white;
-padding:30px;
+
+padding:40px;
+
 text-align:center;
 
 }
 
 
 
-@media(max-width:600px){
 
-header h1{
 
-font-size:40px;
+@media(max-width:700px){
 
-}
+.hero h1{
 
-header p{
-
-font-size:18px;
+font-size:45px;
 
 }
 
+
+.title{
+
+font-size:35px;
+
 }
 
+
+.ai h2{
+
+font-size:32px;
+
+}
+
+
+}
 
 </style>
 
-</head>
 
+</head>
 
 
 <body>
 
 
+
 <header>
+
+
+<div class="hero">
+
 
 <div class="logo">
 📚
@@ -309,22 +469,21 @@ font-size:18px;
 
 
 <h1>
-Scholar Flow
+Scholar <span>Flow</span>
 </h1>
 
 
 <p>
-Study Smarter. Learn Faster.
-</p>
-
-
-<p>
-Notes • Subjects • Offline Learning • AI Tutor
+The modern AI-powered learning platform designed for students.
+Study notes, subjects, offline learning and intelligent assistance in one app.
 </p>
 
 
 
-<a class="btn download"
+<div class="buttons">
+
+
+<a class="btn primary"
 href="https://github.com/mosemwita496-art/scholar-flow/releases/download/v1.0.0/app-release.apk">
 
 ⬇ Download APK
@@ -333,13 +492,19 @@ href="https://github.com/mosemwita496-art/scholar-flow/releases/download/v1.0.0/
 
 
 
-<a class="btn whatsapp"
-href="https://wa.me/254705598222"
-target="_blank">
+<a class="btn secondary"
+href="https://wa.me/254705598222">
 
 💬 WhatsApp Support
 
 </a>
+
+
+
+</div>
+
+
+</div>
 
 
 </header>
@@ -348,24 +513,33 @@ target="_blank">
 
 
 
+<section>
+
+
 <div class="container">
 
 
 <h2 class="title">
-Why Choose Scholar Flow?
+Powerful Learning Features
 </h2>
 
 
 
-<div class="features">
+<div class="grid">
 
 
 <div class="card">
 
-<h3>📚 Smart Notes</h3>
+<div class="icon">
+📚
+</div>
+
+<h3>
+Smart Notes
+</h3>
 
 <p>
-Access organized notes and learning materials by subject.
+Organized study notes and learning resources for every subject.
 </p>
 
 </div>
@@ -374,10 +548,16 @@ Access organized notes and learning materials by subject.
 
 <div class="card">
 
-<h3>📝 Revision</h3>
+<div class="icon">
+🌐
+</div>
+
+<h3>
+Offline Learning
+</h3>
 
 <p>
-Prepare better with structured revision resources.
+Continue studying anywhere without needing constant internet.
 </p>
 
 </div>
@@ -386,49 +566,61 @@ Prepare better with structured revision resources.
 
 <div class="card">
 
-<h3>🌐 Offline Learning</h3>
+<div class="icon">
+🤖
+</div>
+
+<h3>
+AI Ask Assistant
+</h3>
 
 <p>
-Study anywhere even without internet connection.
+Ask questions and receive intelligent learning explanations.
 </p>
 
 </div>
-
 
 
 
 <div class="card">
 
-<h3>🤖 AI Ask</h3>
+<div class="icon">
+⚡
+</div>
+
+<h3>
+Fast Experience
+</h3>
 
 <p>
-Ask questions and get intelligent learning assistance.
+Designed for students with a simple and smooth interface.
 </p>
 
 </div>
 
 
 
-
-<div class="card">
-
-<h3>⚡ Fast Learning</h3>
-
-<p>
-A smooth and simple learning experience for students.
-</p>
-
 </div>
 
 
 </div>
 
 
+</section>
 
 
 
 
-<section class="ai">
+
+
+
+<section>
+
+
+<div class="container">
+
+
+<div class="ai">
 
 
 <h2>
@@ -449,15 +641,21 @@ Unlock advanced AI learning support through a monthly subscription.
 
 <p>
 
-✓ Ask study questions
+✓ Personal study assistant
 <br>
-✓ Get explanations
+✓ Instant explanations
 <br>
-✓ Receive guidance
+✓ Better understanding
 <br>
-✓ Learn faster
+✓ Faster revision
 
 </p>
+
+
+</div>
+
+
+</div>
 
 
 </section>
@@ -468,34 +666,37 @@ Unlock advanced AI learning support through a monthly subscription.
 
 
 
-<h2 class="title" style="margin-top:60px">
+<section>
 
-Subscription
 
+<div class="container">
+
+
+<h2 class="title">
+Choose Your Learning Plan
 </h2>
 
 
-
-
-<div class="pricing">
+<div class="price">
 
 
 <div class="plan">
 
 <h3>
-Free Plan
+Free
 </h3>
 
-
-<p>
-
-✓ Notes
 <br>
-✓ Subjects
-<br>
-✓ Offline learning
 
-</p>
+<ul>
+
+<li>✓ Notes</li>
+
+<li>✓ Subjects</li>
+
+<li>✓ Offline learning</li>
+
+</ul>
 
 
 </div>
@@ -506,39 +707,50 @@ Free Plan
 <div class="plan">
 
 <h3>
-Premium Plan
+Premium
 </h3>
 
 
-<p>
-
-✓ AI Ask Access
 <br>
-✓ Advanced assistance
-<br>
-✓ Premium learning tools
 
-</p>
+
+<ul>
+
+<li>✓ AI Ask</li>
+
+<li>✓ Advanced assistance</li>
+
+<li>✓ Premium features</li>
+
+</ul>
 
 
 </div>
 
 
+</div>
+
 
 </div>
 
 
+</section>
 
 
 
 
-<h2 class="title" style="margin-top:60px">
 
-How It Works
 
+
+<section>
+
+
+<div class="container">
+
+
+<h2 class="title">
+How Scholar Flow Works
 </h2>
-
-
 
 
 <div class="steps">
@@ -547,11 +759,11 @@ How It Works
 <div class="step">
 
 <h3>
-1️⃣ Download
+1️⃣ Install
 </h3>
 
 <p>
-Install Scholar Flow APK on your Android device.
+Download and install the app.
 </p>
 
 </div>
@@ -561,26 +773,25 @@ Install Scholar Flow APK on your Android device.
 <div class="step">
 
 <h3>
-2️⃣ Choose Subject
+2️⃣ Learn
 </h3>
 
 <p>
-Select your preferred subject and topic.
+Choose subjects and access resources.
 </p>
 
 </div>
-
 
 
 
 <div class="step">
 
 <h3>
-3️⃣ Start Learning
+3️⃣ Improve
 </h3>
 
 <p>
-Use notes and AI assistance to improve.
+Use AI assistance to understand better.
 </p>
 
 </div>
@@ -589,66 +800,61 @@ Use notes and AI assistance to improve.
 </div>
 
 
+</div>
+
+
+</section>
 
 
 
 
 
-<h2 class="title" style="margin-top:60px">
 
+
+
+<section>
+
+
+<div class="container">
+
+
+<h2 class="title">
 Frequently Asked Questions
-
 </h2>
-
 
 
 
 <div class="faq">
 
 
-<div class="question" onclick="openFaq(1)">
+<div class="question" onclick="faq(1)">
 What is Scholar Flow?
 </div>
 
-
-<div class="answer" id="a1">
-Scholar Flow is a study application that combines notes, subjects, offline learning and AI assistance.
+<div class="answer" id="f1">
+Scholar Flow is a learning app that combines notes, offline education and AI assistance.
 </div>
 
 
 
 
-<div class="question" onclick="openFaq(2)">
-Does Scholar Flow work offline?
+<div class="question" onclick="faq(2)">
+Does it work offline?
+</div>
+
+<div class="answer" id="f2">
+Yes, learning materials can be accessed offline.
 </div>
 
 
-<div class="answer" id="a2">
-Yes, many learning resources are available offline.
-</div>
 
 
-
-
-<div class="question" onclick="openFaq(3)">
+<div class="question" onclick="faq(3)">
 What is AI Ask Premium?
 </div>
 
-
-<div class="answer" id="a3">
-AI Ask Premium provides advanced AI learning support through a monthly subscription.
-</div>
-
-
-
-
-<div class="question" onclick="openFaq(4)">
-How do I install Scholar Flow?
-</div>
-
-
-<div class="answer" id="a4">
-Download the APK, open the file on your Android device, and install the application.
+<div class="answer" id="f3">
+AI Ask Premium provides advanced AI study support through subscription.
 </div>
 
 
@@ -656,9 +862,18 @@ Download the APK, open the file on your Android device, and install the applicat
 </div>
 
 
+</div>
+
+
+</section>
 
 
 
+
+
+
+
+<section>
 
 
 <div class="contact">
@@ -670,26 +885,26 @@ Need Help?
 
 
 <p>
-Contact Scholar Flow support through WhatsApp.
+Contact Scholar Flow support anytime.
 </p>
 
 
+<br>
 
-<a class="btn whatsapp"
-href="https://wa.me/254705598222"
-target="_blank">
 
-💬 Chat on WhatsApp
+<a class="btn secondary"
+href="https://wa.me/254705598222">
+
+Chat on WhatsApp
 
 </a>
 
 
-
 </div>
 
 
+</section>
 
-</div>
 
 
 
@@ -698,14 +913,19 @@ target="_blank">
 
 <footer>
 
-
-<p>
-© 2026 Scholar Flow
-</p>
+<h3>
+Scholar Flow
+</h3>
 
 
 <p>
 AI Powered Learning Platform
+</p>
+
+
+<p>
+© 2026 Scholar Flow
+
 </p>
 
 
@@ -716,29 +936,22 @@ AI Powered Learning Platform
 
 
 
-
 <script>
 
 
-function openFaq(id){
+function faq(id){
 
-let item=document.getElementById("a"+id);
+let item=document.getElementById("f"+id);
 
-if(item.style.display==="block"){
-
-item.style.display="none";
-
-}else{
-
-item.style.display="block";
-
-}
+item.style.display =
+item.style.display==="block"
+?"none"
+:"block";
 
 }
 
 
 </script>
-
 
 
 
